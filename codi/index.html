@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Restaurant</title>
+    <link rel="stylesheet" href="/estils/style.css">
+    <link rel="icon" type="image/x-icon" href="/img/favicon_io (1)/favicon-32x32.png">
+</head>
+<body>
+     <!--Elements del navegador-->
+     <nav class="menu">
+        <div class="elem"><a href="">Nosaltres</a></div>
+        <div class="elem"><a href="">Carta</a></div>
+        <div class="elem"><a href="">Galeria</a></div>
+    </nav>
+
+    <!--Imatge de fons que serà controlada per divs-->
+    <header class="header-main">
+        <a href="https://www.freepik.es/foto-gratis/vegetales-puestos-izquierda-pizarra-negra_986619.htm#from_view=detail_alsolike">Imagen de valeria_aksakova en Freepik</a>
+        
+        <picture>
+            <!--Una imatge més petita i comprimida per a la versió de 768-->
+            <source media="(min-width:768px)" src="/img/img2/vegetables-set-left-black-slate-original-escalada.png">
+            <!--Una imatge més petita i comprimida per a la versió de 576-->
+            <source media="(min-width:576px)" src="/img/img2/vegetables-set-left-black-slate-low-escalada.jpg">
+            <img src="/img/img2/vegetables-set-left-black-slate-high-escalada.png" alt="Aliments" style="width:auto;">
+        </picture>
+
+        <!--<img src="/img/img2/vegetables-set-left-black-slate-original.jpg" alt="Imagen en una mesa con alimentos en la parte derecha"> -->
+        <div class="topleft">
+            <h1>Restaurante los cubiertos</h1>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- SOBRE NOSALTRES-->
+        <section class="seccio1">
+            <h2>Sobre nosaltres</h2>
+            <div class="container1">
+                <!--Foto esquerre-->
+                <div class="sobre-nosaltres-foto1">
+                    <img src="/img/restaurante1.jpg" alt="Foto sobre el restaurente de Ratatouille, DisneyLand Francia">
+                </div>
+                
+                <!--Text dreta-->
+                <div class="sobre-nosaltres-text1">
+                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est neque, quaerat corporis aliquam similique vitae
+                 quas, ipsa vel aspernatur omnis quis cumque dolorem sunt error. Eum adipisci id voluptatem libero.
+                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est neque, quaerat corporis aliquam similique vitae
+                 quas, ipsa vel aspernatur omnis quis cumque dolorem sunt error. Eum adipisci id voluptatem libero.
+                </div>
+            </div>
+
+            <div class="container2">
+                <!--Text esquerre-->
+                <div class="sobre-nosaltres-text2">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est neque, quaerat corporis aliquam similique vitae
+                    quas, ipsa vel aspernatur omnis quis cumque dolorem sunt error. Eum adipisci id voluptatem libero.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est neque, quaerat corporis aliquam similique vitae
+                    quas, ipsa vel aspernatur omnis quis cumque dolorem sunt error. Eum adipisci id voluptatem libero.
+   
+                   </div>
+                   <!--Foto dreta-->    
+                   <div class="sobre-nosaltres-foto2">
+                        <img src="/img/restaurante2.jpg" alt="Otra fotografía del restaurante tomada desde otro ángulo">
+                   </div>
+            </div>
+        </section>
+
+        <!-- CARTA-->
+        <section class="seccio2">
+            <h2>Carta</h2>
+            <section id="container-carta">
+                <!--Menú 1-->
+                <div class="titol-menu">MENÚ</div>
+                <div class="menu1"><strong>Menú 1</strong></div>
+                <div class="contingut1">
+                    <!--Títol-->
+                    <h3>Contingut</h3>
+                    <!--Text-->
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est neque, quaerat corporis aliquam similique vitae
+                    quas, ipsa vel aspernatur omnis quis cumque dolorem sunt error. Eum adipisci id voluptatem libero.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est neque, quaerat corporis aliquam similique vitae
+                    quas, ipsa vel aspernatur omnis quis cumque dolorem sunt error. Eum adipisci id voluptatem libero.
+                </div>
+                <!--Fotos dels plats, menú 1-->
+                <div class="foto1-menu1">
+                    <img src="/img/menuplat1.jpg" alt="Plat de pasta" class="image">
+                    <div class="overlay">Plat de pasta</div>
+                </div>
+                <div class="foto2-menu1">
+                    <img src="/img/menuplat2.jpg" alt="plat entrant" class="image">
+                    <div class="overlay">Plat d'entrants</div>
+                </div>
+
+                <!--Menú 2-->
+                <div class="menu2"><strong>Menú 1</strong></div>
+                <div class="contingut2">
+                    <!--Titol-->
+                    <h3>Contingut</h3>
+                    
+                    <!--Text-->
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est neque, quaerat corporis aliquam similique vitae
+                    quas, ipsa vel aspernatur omnis quis cumque dolorem sunt error. Eum adipisci id voluptatem libero.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est neque, quaerat corporis aliquam similique vitae
+                    quas, ipsa vel aspernatur omnis quis cumque dolorem sunt error. Eum adipisci id voluptatem libero.                    
+                </div>
+
+                <!--Fotos dels plats, menú 2-->
+                <div class="foto1-menu2">
+                    <img src="/img/platdepeix.webp" alt="Plat de peix" class="image">
+                    <div class="overlay">Plat de peix</div>
+                </div>
+
+                <div class="foto2-menu2">
+                    <img src="/img/platdecarn.avif" alt="Plat de carn" class="image">
+                    <div class="overlay">Plat de carn</div>
+                </div>
+            </section>
+
+        </section>
+
+        <!--GALERIA DE FOTOS-->
+        <section class="seccio3"> 
+            <h2>Galeria d'imatges</h2>
+            <div class="container-galeria">
+                <div class="foto1">
+					<img src="/img/img2/delicious-cheeseburger2.jpg" alt="Galeria d'imatges d'una hamburguesa. Fotografia 1 de 8">
+                    <!--<a href="https://www.freepik.es/foto-gratis/deliciosa-hamburguesa-queso_977897.htm#from_view=detail_alsolike">Imagen de jannoon028 en Freepik</a>-->
+				</div>
+	          	<div class="foto2">
+	          		<img src="/img/img2/tasty-burger-isolated-white-background-fresh-hamburger-fastfood-with-beef-cheese2.jpg" alt="Fotografia 2 de 8">
+                    <!--<a href="https://www.freepik.es/foto-gratis/sabrosa-hamburguesa-aislada-sobre-fondo-blanco-comida-rapida-hamburguesa-fresca-carne-queso_38117312.htm#fromView=search&page=1&position=2&uuid=d6835adf-9978-460f-8f17-5add1f8dcd24">Imagen de svstudioart en Freepik</a>-->
+                </div>
+	         	<div class="foto2">
+	         		<img src="/img/img2/delicious-cheeseburger2.jpg" alt="Fotografia 3 de 8">
+                    <!--<a href="https://www.freepik.es/foto-gratis/deliciosa-hamburguesa-queso_977897.htm#from_view=detail_alsolike">Imagen de jannoon028 en Freepik</a>-->
+	         	</div>
+	          	<div class="foto1">
+	          		<img src="/img/img2/tasty-burger-isolated-white-background-fresh-hamburger-fastfood-with-beef-cheese2.jpg" alt="Fotografia 4 de 8">
+                    <!--<a href="https://www.freepik.es/foto-gratis/sabrosa-hamburguesa-aislada-sobre-fondo-blanco-comida-rapida-hamburguesa-fresca-carne-queso_38117312.htm#fromView=search&page=1&position=2&uuid=d6835adf-9978-460f-8f17-5add1f8dcd24">Imagen de svstudioart en Freepik</a>-->
+	          	</div>
+	          	<div class="foto1">
+	          		<img src="/img/img2/delicious-cheeseburger2.jpg" alt="Fotografia 5 de 8">
+                    <!--<a href="https://www.freepik.es/foto-gratis/deliciosa-hamburguesa-queso_977897.htm#from_view=detail_alsolike">Imagen de jannoon028 en Freepik</a>-->
+	          	</div>
+	          	<div class="foto2">
+	          		<img src="/img/img2/tasty-burger-isolated-white-background-fresh-hamburger-fastfood-with-beef-cheese2.jpg" alt="Fotografia 6 de 8">
+                    <!--<a href="https://www.freepik.es/foto-gratis/sabrosa-hamburguesa-aislada-sobre-fondo-blanco-comida-rapida-hamburguesa-fresca-carne-queso_38117312.htm#fromView=search&page=1&position=2&uuid=d6835adf-9978-460f-8f17-5add1f8dcd24">Imagen de svstudioart en Freepik</a>-->
+	          	</div>
+	          	<div class="foto2">
+	          		<img src="/img/img2/delicious-cheeseburger2.jpg" alt="Fotografia 7 de 8">
+                    <!--<a href="https://www.freepik.es/foto-gratis/deliciosa-hamburguesa-queso_977897.htm#from_view=detail_alsolike">Imagen de jannoon028 en Freepik</a>-->
+	          	</div>
+	          	<div class="foto1">
+	          		<img src="/img/img2/tasty-burger-isolated-white-background-fresh-hamburger-fastfood-with-beef-cheese2.jpg" alt="Fotografia 8 de 8">
+                    <!--<a href="https://www.freepik.es/foto-gratis/sabrosa-hamburguesa-aislada-sobre-fondo-blanco-comida-rapida-hamburguesa-fresca-carne-queso_38117312.htm#fromView=search&page=1&position=2&uuid=d6835adf-9978-460f-8f17-5add1f8dcd24">Imagen de svstudioart en Freepik</a>-->
+	          	</div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+            <div class="contact-info">
+            <p>&#128231 elscoberts@gmail.com | &#9990 123-456-7890</p>
+        </div>
+        <div class="restaurant-name">
+            <p>Restaurant Els Coberts</p>
+        </div>
+    </footer>
+
+    
+</body>
+</html>

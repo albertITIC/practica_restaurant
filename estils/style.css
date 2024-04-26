@@ -1,0 +1,327 @@
+body{
+    margin: auto; /*Diem que el navegador faci el que vulgui*/  
+}
+
+.menu{
+    display: flex;
+    justify-content: end;
+    gap: 15px;
+    border: 1px solid black;
+    padding: 20px;
+    position: sticky;
+    background-color: black;
+    top: 0px;/*per manenir-lo*/
+    z-index: 2;/*quin vols que estigui sobre l'altres*/
+}
+
+/*Borrar un cop acabat, sol ho faig per saber quan ocupa*/
+.elem{
+    border: 1px solid black;
+}
+
+/*Links */
+a:link {
+    text-decoration: none;
+    color: white;
+}
+  
+/* visited link */
+  a:visited {
+    text-decoration: none;
+    color: white;
+}
+ 
+/* mouse over link */
+  a:hover {
+    text-decoration: underline;
+    color: white;
+}
+  
+/* selected link */
+  a:active {
+    text-decoration: underline;
+    color: white;
+}
+
+.header-main{
+    position: relative;
+}
+
+/*Imatge principal*/
+.header-main img{
+    width: 100%;
+    opacity: 0.3;
+    overflow: hidden;
+}
+
+/*h1, text relatiu*/
+.topleft {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    font-size: 18px;
+}
+
+/*Controlar el container on aniràn tots els elements*/
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Container per els elements de la secció 1*/
+.seccio1{
+    width: 70%;
+    padding: 40px;
+}
+
+/*els elements dins d'aquí serà controlat per aquest div*/
+.container1{
+    display: flex;
+    align-items: center;
+}
+
+/*Div per controlar la foto de la esquerre*/
+.sobre-nosaltres-foto1{
+    width: 30%;
+    float: left;
+}
+
+/*Foto*/
+.sobre-nosaltres-foto1 img{
+    width: 100%;
+}
+
+/*text de la dreta*/
+.sobre-nosaltres-text1{
+    float: left;
+    width: 80%;
+    padding-left: 15px;
+    font-size: 18px;
+}
+
+/*container 2 per controlar el text i la img*/
+.container2{
+    display: flex;
+    align-items: center;
+    padding-top: 5px;
+}
+
+/*Text de la esquerre*/
+.sobre-nosaltres-text2{
+    float: left;
+    width: 80%;
+    padding-left: 15px;
+    font-size: 18px;
+}
+
+/*div que controla a la foto*/
+.sobre-nosaltres-foto2{
+    width: 30%;
+}
+
+/*Foto de situada a la dreta*/
+.sobre-nosaltres-foto2 img{
+    float: right;
+    width: 100%;
+}
+
+/*CARTA*/
+.seccio2{
+    width: 70%;
+    padding: 40px;
+}
+
+/*Container per grid*/
+#container-carta{
+    display: grid;
+    grid-template-columns: 20% 40% 40%;
+    grid-template-areas: "titol-menu titol-menu titol-menu"
+                          "menu1 contingut1 contingut1"
+                          "menu1 foto1-menu1 foto2-menu1"
+                          "menu2 contingut2 contingut2"
+                          "menu2 foto1-menu2 foto2-menu2";
+
+    row-gap: 5px;    
+    border: 1px solid black;
+}
+
+/*Capçalera de la taula*/
+.titol-menu{
+    background-color: darkblue;
+    color: white;
+    text-align: center;
+    grid-area: titol-menu;
+}
+
+/*Part de l'esquerre*/
+.menu1{
+    grid-area: menu1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+
+/*Titol + text a la dreta*/
+.contingut1{
+    grid-area: contingut1;
+    padding-left: 15px;
+    border: 1px solid black;
+}
+
+.foto1-menu1{
+    position: relative;
+    width: 100%;
+}
+
+.foto1-menu1 img{
+    grid-area: foto-plat1;
+    width: 100%;
+}
+
+.foto2-menu1{
+    position: relative;
+    width: 100%;
+}
+
+.foto2-menu1 img{
+    grid-area: foto2-menu1;
+    width: 100%;
+    height: 100%;
+}   
+
+/*menú 2, part de sota de la taula*/
+.menu2{
+    grid-area: menu2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.contingut2{
+    grid-area: contingut2;
+    padding-left: 15px;
+    border: 1px solid black;
+}
+
+.foto1-menu2{
+    position: relative;
+    width: 100%;
+}
+
+.foto1-menu2 img{
+    grid-area: foto1-menu2;
+    width: 100%;
+    height: 100%;
+}
+
+.foto2-menu2{
+    position: relative;
+    width: 100%;
+}
+
+.foto2-menu2 img{
+    grid-area: foto2-menu2;
+    width: 100%;
+}
+
+/*Per editar l'imatge*/
+.image{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.overlay{
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); /*transparent de color negre */
+    color: #f1f1f1;
+    width: 91%;
+    transition: .5s ease;
+    opacity:1;
+    color: white;
+    font-size: 20px;
+    padding: 16px;
+    text-align: center;
+}
+
+.foto1-menu1:hover .overlay {
+    opacity: 1;
+}
+
+.foto2-menu1:hover .overlay {
+    opacity: 1;
+}
+
+.foto1-menu2:hover .overlay {
+    opacity: 1;
+}
+
+.foto2-menu2:hover .overlay {
+    opacity: 1;
+}
+
+/*Galeria de fotos*/
+.seccio3{
+    width: 70%;
+    padding: 40px;
+    /*border: 1px solid black;*/
+}
+
+/*He de fer ús de flex per la galeria*/
+.container-galeria{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    border: 1px solid black;
+}
+
+.galeria-de-fotos img{
+    width: 100%;
+}
+
+.foto1{
+	width: 23%;
+	padding: 5px;
+	filter: brightness(0.4);
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.foto1 img{
+  width: 100%;
+}
+
+.foto2{
+	width: 23%;
+    padding: 5px;
+	border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.foto2 img{
+  width: 100%;
+}
+
+.foto2:hover{
+  opacity: 0.8;
+}
+
+
+/*Footer*/
+.footer{
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  background-color: black;
+  color: white; 
+}		
+
+.contact-info p, .restaurant-name p{
+	margin: 0;
+}
