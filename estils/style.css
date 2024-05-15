@@ -2,7 +2,7 @@ body{
     margin: auto; /*Diem que el navegador faci el que vulgui*/  
 }
 
-.menu{
+.nav-menu{
     display: flex;
     justify-content: end;
     gap: 15px;
@@ -12,11 +12,7 @@ body{
     background-color: black;
     top: 0px;/*per manenir-lo*/
     z-index: 2;/*quin vols que estigui sobre l'altres*/
-}
-
-/*Borrar un cop acabat, sol ho faig per saber quan ocupa*/
-.elem{
-    border: 1px solid black;
+    transition: all 3s; /*Li posem una transicció*/
 }
 
 /*Links */
@@ -243,7 +239,7 @@ a:link {
     color: #f1f1f1;
     width: 91%;
     transition: .5s ease;
-    opacity:1;
+    opacity:0;
     color: white;
     font-size: 20px;
     padding: 16px;
@@ -310,6 +306,18 @@ a:link {
 
 .foto2:hover{
   opacity: 0.8;
+}
+
+/*Video*/
+.container-video{
+    border: 1px solid black;
+    width: 100%;
+    
+}
+
+.container-video video{
+    width: 100%;
+    border: 1px solid black;
 }
 
 
