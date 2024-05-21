@@ -255,22 +255,16 @@
             video.pause();
         }
         
-        //Aquesta funció el que fa és: quan  jo faci scroll en la pagina s'executi aquesta fumció
-         window.onscroll = function(){
-            console.log('Total d\'scrolls:')
-            var posicio = document.documentElement.scrollTop;    //Per saber la posició del scroll, quants scrolls he fet = 190
-            var video = document.getElementById("video1");
-
-            if (document.body.scrollTop > 2400 || document.documentElement.scrollTop > 2400) {
+        //Aquesta funció el que fa és: quan  jo faci scroll en la pagina s'executi aquesta funció
+        window.onscroll = function myFunction() {
+            if (document.body.scrollTop > 2500 || document.documentElement.scrollTop > 2500) {
                 play_video();
-            }else{
+            } else {
                 pause_video();
             }
-        };
+        }
 
-        
-        
-
+        // ### FUNCIÓ TREURE I DONAR VOLUM ###
         function treure_posar_volum(){
             console.log('Estem en la funció de function treure_posar_volum()')
             var video = document.getElementById('video1');
@@ -288,7 +282,7 @@
         }
 
         // ###  DONAR VOLUM I MUTED ###
-        //Fumció per donar volum (si està mutejat).
+        //Funció per donar volum (si està mutejat).
         function posar_Volum(){
             console.log("Estic dins de la funció posar_volum!");
 
