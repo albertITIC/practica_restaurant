@@ -5,19 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Restaurant</title>
     <link rel="stylesheet" href="/estils/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> <!--Important per poder fer us de icones-->
     <link rel="icon" type="image/x-icon" href="/img/favicon_io (1)/favicon-32x32.png">
 </head>
 <body>
      <!--Elements del navegador-->
-     <nav class="menu">
+     <nav class="nav-menu" id="nav-menu">
         <div class="elem"><a href="">Nosaltres</a></div>
         <div class="elem"><a href="">Carta</a></div>
         <div class="elem"><a href="">Galeria</a></div>
+        <span class="material-icons" style="color: blue; font-size: 18px;" onclick="canviar_menu()">play_circle</span> <!--Icona per canviar de fons y tamany-->
     </nav>
 
     <!--Imatge de fons que serà controlada per divs-->
     <header class="header-main">
-        <a href="https://www.freepik.es/foto-gratis/vegetales-puestos-izquierda-pizarra-negra_986619.htm#from_view=detail_alsolike">Imagen de valeria_aksakova en Freepik</a>
+        <!--<a href="https://www.freepik.es/foto-gratis/vegetales-puestos-izquierda-pizarra-negra_986619.htm#from_view=detail_alsolike">Imagen de valeria_aksakova en Freepik</a>-->
         
         <picture>
             <!--Una imatge més petita i comprimida per a la versió de 768-->
@@ -32,10 +34,13 @@
             <h1>Restaurante los cubiertos</h1>
         </div>
     </header>
-    
+
 
     <main class="main">
         <!-- SOBRE NOSALTRES-->
+
+        <!-- ESTEM A LA BRANCA D'ANIMACIONS -->
+        <!-- Estem a la branca de vídeo -->
         <section class="seccio1">
             <h2>Sobre nosaltres</h2>
             <div class="container1">
@@ -160,6 +165,32 @@
 	          	</div>
             </div>
         </section>
+        
+        <!--Vídeo-->
+        <section class="seccio3">
+            <!--
+                
+                <h2>Vídeo</h2>
+             <div class="container-video">
+                <video id= video1 controls>
+                    <source src="/video/video_practica_restaurant.mp4" type="video/mp4">
+                </video>
+            </div>
+            -->
+
+            <h2>Vídeo</h2>
+            <div class="container-video">
+                <video id="video1">
+                    <source src="/video/video_practica_restaurant.mp4" type="video/mp4">
+                </video>
+                <!-- <span class="material-icons" style="color: blue; font-size: 18px;" onclick="canviar_menu()">play_circle</span> -->
+                <span id="control_play" class="material-icons" style="color: red; font-size: 33px;" onclick="play_pause_video()">play_circle</span>
+                <!-- <span class="material-icons" style="color: red; font-size: 33px;" onclick="pause_video()">stop_circle</span> -->
+                <span id="control_volume" class="material-icons" style="color: red; font-size: 33px;" onclick="treure_posar_volum()">volume_up</span>
+                <!-- <span class="material-icons" style="color: red; font-size: 33px;" onclick="treure_Volum()">volume_off</span> -->
+
+            </div>         
+        </section>
     </main>
 
     <footer class="footer">
@@ -171,6 +202,106 @@
         </div>
     </footer>
 
+    <!-- Podem fer el mateix per pausar-ho -->    
+    <script>
+        console.log("init del projecte");
+
+        //Si no crido a la funció no s'executa
+        function canviar_menu(){
+            var menu = document.getElementById('nav-menu');
+            console.log("Estic dins de la funció canviar menú.");
+
+            menu.style.height = "30px";                         //Passaré de 100px a 50 px 
+            menu.style.backgroundColor = "blue";                //De negre a blau
+        }
+
+        //És pot fer en una sola funció
+        function play_pause_video() {
+            console.log('Estem en la funció de play_pause_video!');
+            
+            var video = document.getElementById('video1');
+            var control = document.getElementById('control_play');
+            
+            if (video.paused) {
+                video.play();
+                control.innerHTML = "pause_circle";
+                console.log('El vídeo està repoduïnt.');
+            } else {
+                video.pause();
+                control.innerHTML = "play_circle";
+                console.log('El vídeo està pausat.');
+            }
+        }
+        //FUNCION PLAY
+        function play_video(){
+            console.log("Estic dins de la funció play_video!");
+            //Crearé una variable i li adjuntaré la variable per id de video1.
+            var video = document.getElementById("video1");
+            var control = document.getElementById("control_play");
+            
+            //Executem en aquest cas s'executa o reprodueix
+            video.play();
+        }
+
+        //FUNCION PAUSE
+        function pause_video(){
+            console.log("Estic dins de la funció stop_video!");
+            
+            //Crearé una variable i li adjuntaré la variable per id de video1.
+            var video = document.getElementById("video1");
+            var control = document.getElementById("control_play");
+            
+            //Executem, en aquest cas el posaré en pausa
+            video.pause();
+        }
+        
+        //Aquesta funció el que fa és: quan  jo faci scroll en la pagina s'executi aquesta funció
+        window.onscroll = function myFunction() {
+            if (document.body.scrollTop > 2500 || document.documentElement.scrollTop > 2500) {
+                play_video();
+            } else {
+                pause_video();
+            }
+        }
+
+        // ### FUNCIÓ TREURE I DONAR VOLUM ###
+        function treure_posar_volum(){
+            console.log('Estem en la funció de function treure_posar_volum()')
+            var video = document.getElementById('video1');
+            var control = document.getElementById('control_volume');
+            
+            if (video.muted) {
+                console.log('Li hem posat el volum al vídeo');
+                video.muted = false;
+                control.innerHTML = "volume_up";
+            } else {
+                console.log('Li hem tret el volum al vídeo');
+                video.muted = true;
+                control.innerHTML = "volume_off";
+            }
+        }
+
+        // ###  DONAR VOLUM I MUTED ###
+        //Funció per donar volum (si està mutejat).
+        function posar_Volum(){
+            console.log("Estic dins de la funció posar_volum!");
+
+            var video = document.getElementById("video1");
+
+            video.muted = false;
+        }
+
+        //Funció per mutejar (si està en volum).
+        function treure_Volum(){
+            console.log("Estic dins de la funció treure_volum!");
+
+            var video = document.getElementById("video1");
+
+            video.muted=true;
+        }
+
+       
     
+    </script>
 </body>
 </html>
